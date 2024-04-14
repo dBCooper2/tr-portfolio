@@ -11,19 +11,18 @@ const ResumeButton = ({ sectionId }) => {
 
     const handleClick = () => {
       if (buttonRef.current) {
-        buttonRefValue = buttonRef.current;
         const abstractSection = document.getElementById(sectionId);
         abstractSection.scrollIntoView({ behavior: 'smooth' });
       }
     };
 
-    if (buttonRefValue) {
-      buttonRefValue.addEventListener('click', handleClick);
+    if (buttonRef.current) {
+      buttonRef.current.addEventListener('click', handleClick);
     }
 
     return () => {
-      if (buttonRefValue) {
-        buttonRefValue.removeEventListener('click', handleClick);
+      if (buttonRef.current) {
+        buttonRef.current.removeEventListener('click', handleClick);
       }
     };
   }, [sectionId]);
