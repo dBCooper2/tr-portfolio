@@ -30,7 +30,7 @@ const ResumeButton = ({ sectionId }) => {
   return (
     <button
       ref={buttonRef}
-      className={`flex items-center bg-transparent text-cBody border-none cursor-pointer transition duration-300 ease-in-out focus:outline-none hover:underline hover:font-bold`}
+      className={`flex items-center bg-transparent text-2xl text-cBody border-none cursor-pointer transition duration-300 ease-in-out focus:outline-none hover:underline hover:font-bold`}
     >
       - {sectionId}
     </button>

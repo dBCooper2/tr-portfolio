@@ -23,7 +23,7 @@ const Skills = () => {
             cursor: 'pointer',
             transition: 'opacity 0.3s ease',
           }}
-          className="hover:opacity-80 inline-block"
+          className="hover:opacity-50 inline-block"
         >
           {tag.text}
         </Link>
@@ -32,9 +32,12 @@ const Skills = () => {
   }, []);
 
   return (
-    <div className="flex flex-wrap gap-2 justify-center bg-cBlock shadow-md rounded-xl p-2">
-      {renderedTags}
-    </div>
+    <>
+      <h1 className="markdown-h1">Skills</h1>
+      <div className="flex flex-wrap gap-1 justify-center bg-cBlock shadow-md rounded-xl p-2">
+        {renderedTags}
+      </div>
+    </>
   );
 };
 

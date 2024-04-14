@@ -23,20 +23,22 @@ const TagPage = ({ params }) => {
   );
 
   return (
-    <div className="container mx-auto px-4 sm:px-0 py-8 min-h-screen font-oldStandardTT">
-      <div className="flex justify-between items-center mb-4">
-        <h1 className="markdown-h1">Projects Using :: {tag}</h1>
-        <TagFilter initialTag={tag} />
+    <>
+      <div className="container mx-auto px-4 sm:px-0 py-8 min-h-screen font-oldStandardTT">
+        <div className="flex justify-between items-center mb-4">
+          <h1 className="markdown-h1">Projects Using :: {tag}</h1>
+          <TagFilter initialTag={tag} />
+        </div>
+        <div className="grid grid-cols-1 gap-4">
+          {filteredProjects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
+        </div>
+        <hr className="my-8" />
+        <h1 className="markdown-h1">Articles</h1>
+        {/* Add your articles content here */}
       </div>
-      <div className="grid grid-cols-1 gap-4">
-        {filteredProjects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
-        ))}
-      </div>
-      <hr className="my-8" />
-      <h1 className="markdown-h1">Articles</h1>
-      {/* Add your articles content here */}
-    </div>
+    </>
   );
 };
 

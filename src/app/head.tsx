@@ -6,14 +6,14 @@ export default function Head() {
   return (
     <>
     <>
-      <title>Trevor Rowland&apos;s Portfolio</title>
+      <title>Trevor Rowland :: Portfolio</title>
       <meta content="width=device.width, initial-scale=1" name="viewport" />
       <link rel="icon" href="/images/icon.png" sizes="any" />
     </>
-    <div className="pt-4 md:pt-8">
+    <div className="pt-4">
       <Summary />
       <br />
-      <div className="space-y-4 hidden md:block">
+      <div className="space-y-4 hidden lg:block">
         <div className="flex flex-col space-y-2">
           <ResumeButton sectionId="Abstract" />
           <ResumeButton sectionId="Skills" />

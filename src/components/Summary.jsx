@@ -25,12 +25,12 @@ export default async function Summary() {
           <MarkdownContent content={summaryContent} />
         </div>
       </div>
-      <div className="px-2 mt-8 flex flex-wrap justify-center md:justify-start gap-4">
+      <div className="px-2 mt-8 flex flex-wrap justify-center md:justify-start gap-4 text-xl font-bold">
         <a
           href="https://www.linkedin.com/in/trevor-rowland711/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-cLink hover:text-cLinkVisited hover:underline hover:font-bold"
+          className="text-cLink hover:text-cLinkVisited hover:underline"
         >
           LinkedIn
         </a>
@@ -38,7 +38,7 @@ export default async function Summary() {
           href="https://github.com/dBCooper2"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-cLink hover:text-cLinkVisited hover:underline hover:font-bold"
+          className="text-cLink hover:text-cLinkVisited hover:underline"
         >
           GitHub
         </a>
@@ -46,23 +46,16 @@ export default async function Summary() {
           href="/documents/trevor-rowland-resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-cLink hover:text-cLinkVisited hover:underline hover:font-bold"
+          className="text-cLink hover:text-cLinkVisited hover:underline"
         >
           Resume
         </a>
         <a
           href="/contact"
           rel="noopener noreferrer"
-          className="text-cLink hover:text-cLinkVisited hover:underline hover:font-bold"
+          className="text-cLink hover:text-cLinkVisited hover:underline"
         >
           Contact
-        </a>
-        <a
-          href="/blog"
-          rel="noopener noreferrer"
-          className="text-cLink hover:text-cLinkVisited hover:underline hover:font-bold"
-        >
-          Blog
         </a>
       </div>
     </div>

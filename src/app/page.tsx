@@ -15,17 +15,18 @@ export default async function HomePage() {
   // const researchContent = await fetchMarkdownContent('src/content/Research.md');
   const footerContent = await fetchMarkdownContent('src/content/Footer.md');
 
+  // Tailwind Breakpoints: none/sm: Phones, md: Tablets, lg: Desktop, xl: Widescreen Desktop
+
   return (
-    <div className="flex flex-col md:flex-row h-screen bg-cBg font-oldStandardTT px-4 md:px-8 lg:px-16 relative overflow-y-auto">
-      <div className="w-full md:w-1/3 bg-cBg sticky top-0 left-0 p-6 md:px-4 md:py-24 min-h-screen md:min-h-1/3 md:order-1">
+    <div className="h-screen flex flex-col lg:flex-row bg-cBg font-oldStandardTT px-8 py-24 relative overflow-y-auto">
+      <div className="bg-cBg lg:w-3/5 px-6 lg:px-20 lg:sticky lg:top-0 lg:left-0 lg:min-h-1/3 lg:order-1">
         <Head />
       </div>
-      <div className="w-full md:w-2/3 bg-cBg p-4 md:p-12 md:min-h-2/3 md:order-2 space-y-6">
+      <div className="flex-row bg-cBg px-6 lg:px-12 py-8 grid grid-cols-1 gap-10 lg:order-2">
         <div id="Abstract">
           <MarkdownContent content={abstractContent} />
         </div>
         <div id="Skills">
-          <h1 className="markdown-h1">Skills</h1>
           <Skills />
         </div>
         <div id="Education">
