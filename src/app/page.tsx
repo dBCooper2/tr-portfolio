@@ -20,7 +20,7 @@ export default async function HomePage(sectionId: string) {
       <div className="w-full md:w-1/3 bg-cBg sticky top-0 left-0 p-6 md:px-4 md:py-24 min-h-screen md:min-h-1/3 md:order-1">
         <Head />
       </div>
-      <div className="w-full md:w-2/3 bg-cBg p-4 md:p-12 md:min-h-2/3 md:order-2 space-y-2">
+      <div className="w-full md:w-2/3 bg-cBg p-4 md:p-12 md:min-h-2/3 md:order-2 space-y-6">
         <div id="Abstract">
           <MarkdownContent content={abstractContent} />
         </div>

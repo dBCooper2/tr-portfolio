@@ -74,6 +74,6 @@ body {
     }
 
     .markdown-paragraph {
-        @apply text-cBody mb-4;
+        @apply text-cBody text-lg mb-4;
     }
 }

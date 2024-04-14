@@ -8,7 +8,7 @@ export default function Head() {
     <>
       <title>Trevor Rowland's Portfolio</title>
       <meta content="width=device.width, initial-scale=1" name="viewport" />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/images/icon.png" sizes="any" />
     </>
     <div className="pt-4 md:pt-8">
       <Summary />

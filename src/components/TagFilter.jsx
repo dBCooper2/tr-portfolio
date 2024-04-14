@@ -20,7 +20,7 @@ const TagFilter = ({ initialTag }) => {
   };
 
   return (
-    <div className="relative w-1/4">
+    <div className="relative w-1/4 font-oldStandardTT">
       <button
         className="bg-cBlock text-cBody px-4 py-2 rounded-md flex items-center justify-between w-full"
         onClick={handleDropdownToggle}

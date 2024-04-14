@@ -23,7 +23,7 @@ const TagPage = ({ params }) => {
   );
 
   return (
-    <div className="container mx-auto px-4 sm:px-0 py-8 min-h-screen">
+    <div className="container mx-auto px-4 sm:px-0 py-8 min-h-screen font-oldStandardTT">
       <div className="flex justify-between items-center mb-4">
         <h1 className="markdown-h1">Projects Using :: {tag}</h1>
         <TagFilter initialTag={tag} />

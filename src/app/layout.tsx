@@ -4,6 +4,14 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Trevor Rowland::Portfolio",
   description: "Trevor Rowland's Professional Portfolio",
+  icons: {
+    icon: [
+      {
+        url: "/images/icon.png", // /public path
+        href: "/images/icon.png", // /public path
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
