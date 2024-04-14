@@ -13,6 +13,28 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        cBg: '#fdf6e3', // background color
+        cBgGradient: '#fbf1dc', // background color gradient
+        cH1: '#1a327a', // heading 1 text color
+        cH2: '#1d3785', // heading 2 text color
+        cH3: '#20418f', // heading 3 text color
+        cH4: '#234a9a', // heading 4 text color
+        cH5: '#2654a4', // heading 5 text color
+        cH6: '#295dad', // heading 6 text color
+        cBody: '#1f3b8b', // body text color
+        cBlock: '#d8d3c5', // code block color
+        cLink: '#344ea2', // link color
+        cLinkVisited: '#516196', // visited link color
+        cButton: '#1a327a', // button color
+        cButtonHover: '#1e3a82', // button hover color
+        cLineBreak: '#1f3b8b', // colors for line breaks
+      },
+      fontFamily: {
+        'oldStandardTT': ['Old Standard TT', 'serif'], //LaTeX-Like Font
+        'playfairDisplay': ['Playfair Display', 'serif'],
+        'crimsonPro': ['Crimson Pro', 'serif'],
+      },
     },
   },
   plugins: [],
