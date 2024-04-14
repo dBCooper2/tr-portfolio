@@ -6,7 +6,7 @@ export default function Head() {
   return (
     <>
     <>
-      <title>Trevor Rowland's Portfolio</title>
+      <title>Trevor Rowland&apos;s Portfolio</title>
       <meta content="width=device.width, initial-scale=1" name="viewport" />
       <link rel="icon" href="/images/icon.png" sizes="any" />
     </>

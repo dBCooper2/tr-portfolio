@@ -7,7 +7,7 @@ import { fetchMarkdownContent } from '@/utils/markdown';
 import 'tailwindcss/tailwind.css';
 import Head from "./head"
 
-export default async function HomePage(sectionId: string) {
+export default async function HomePage() {
   const abstractContent = await fetchMarkdownContent('src/content/Abstract.md');
   const educationContent = await fetchMarkdownContent('src/content/Education.md');
   const experienceContent = await fetchMarkdownContent('src/content/Experience.md');

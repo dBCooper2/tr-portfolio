@@ -6,20 +6,24 @@ const ResumeButton = ({ sectionId }) => {
   const buttonRef = useRef(null);
 
   useEffect(() => {
+
+    let buttonRefValue = null; // <-- variable to hold ref value
+
     const handleClick = () => {
       if (buttonRef.current) {
+        buttonRefValue = buttonRef.current;
         const abstractSection = document.getElementById(sectionId);
         abstractSection.scrollIntoView({ behavior: 'smooth' });
       }
     };
 
-    if (buttonRef.current) {
-      buttonRef.current.addEventListener('click', handleClick);
+    if (buttonRefValue) {
+      buttonRefValue.addEventListener('click', handleClick);
     }
 
     return () => {
-      if (buttonRef.current) {
-        buttonRef.current.removeEventListener('click', handleClick);
+      if (buttonRefValue) {
+        buttonRefValue.removeEventListener('click', handleClick);
       }
     };
   }, [sectionId]);
