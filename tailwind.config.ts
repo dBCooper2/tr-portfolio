@@ -24,8 +24,8 @@ const config: Config = {
         cH6: '#295dad', // heading 6 text color
         cBody: '#1f3b8b', // body text color
         cBlock: '#d8d3c5', // code block color
-        cLink: '#344ea2', // link color
-        cLinkVisited: '#516196', // visited link color
+        cLink: '#2142ab', // link color
+        cLinkVisited: '#0036D8', // visited link color
         cButton: '#1a327a', // button color
         cButtonHover: '#1e3a82', // button hover color
         cLineBreak: '#1f3b8b', // colors for line breaks

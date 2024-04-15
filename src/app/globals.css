@@ -69,6 +69,10 @@ body {
         @apply text-cLink hover:text-cLinkVisited;
     }
 
+    .markdown-link:hover {
+      @apply text-cLink hover:text-cLinkVisited font-bold underline;
+  }
+
     .markdown-hr {
       @apply text-cLineBreak;
     }

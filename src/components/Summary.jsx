@@ -10,22 +10,22 @@ export default async function Summary() {
   return (
     <div>
       <div className="px-2 space-y-4">
-        <div className="flex justify-start">
+        <div className="flex justify-center lg:justify-start">
           <div className="relative">
             <Image
               src="/images/headshot.png"
               alt="Trevor Rowland Headshot"
-              width={100}
-              height={100}
+              width={225}
+              height={225}
               className="rounded-full border-4 border-cBlock"
             />
           </div>
         </div>
-        <div id="Summary">
+        <div id="Summary" className="flex justify-center lg:justify-start">
           <MarkdownContent content={summaryContent} />
         </div>
       </div>
-      <div className="px-2 mt-8 flex flex-wrap justify-center md:justify-start gap-4 text-xl font-bold">
+      <div className="px-2 mt-8 flex flex-wrap justify-center lg:justify-start gap-4 text-xl font-bold">
         <a
           href="https://www.linkedin.com/in/trevor-rowland711/"
           target="_blank"
