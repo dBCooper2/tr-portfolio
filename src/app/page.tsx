@@ -4,6 +4,7 @@ import MarkdownContent from '@/components/MarkdownContent';
 
 import { fetchMarkdownContent } from '@/utils/markdown';
 
+//css
 import 'tailwindcss/tailwind.css';
 import Head from "./head"
 
@@ -19,7 +20,7 @@ export default async function HomePage() {
 
   return (
     <div className="h-screen flex flex-col lg:flex-row bg-cBg font-oldStandardTT px-8 py-24 relative overflow-y-auto">
-      <div className="bg-cBg lg:w-3/5 px-6 lg:px-20 lg:sticky lg:top-0 lg:left-0 lg:min-h-1/3 lg:order-1">
+      <div className="bg-cBg lg:w-full px-6 lg:px-20 lg:sticky lg:top-0 lg:left-0 lg:min-h-1/3 lg:order-1">
         <Head />
       </div>
       <div className="flex-row bg-cBg px-6 lg:px-12 py-8 grid grid-cols-1 gap-10 lg:order-2">
