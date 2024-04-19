@@ -32,7 +32,9 @@ const ProjectCard = ({ project }) => {
           <div className="flex-1 flex justify-start">
             {project.code && (
               <a
-                href={project.code}
+                href={project.code} 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="markdown-link font-bold hover:font-black hover:underline mr-4"
               >
                 Code

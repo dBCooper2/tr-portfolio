@@ -8,7 +8,7 @@ export default function ArticleCard({ article }) {
   const { push } = useRouter();
 
   const handleArticleClick = () => {
-    push(`/blog/${article.slug}`);
+    push(`./blog/${article.slug}`);
   };
 
   return (
