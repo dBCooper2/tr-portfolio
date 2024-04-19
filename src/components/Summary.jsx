@@ -18,6 +18,9 @@ export default async function Summary() {
               width={225}
               height={225}
               className="rounded-full border-4 border-cBlock"
+              priority={true}
+              placeholder="blur"
+              blurDataURL="/images/headshot_blurred.webp" // Add this line
             />
           </div>
         </div>
