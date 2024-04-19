@@ -13,7 +13,7 @@ const ProjectCard = ({ project }) => {
               <div
                 key={index}
                 style={{
-                  backgroundColor: tagInfo ? tagInfo.color : '#ccc',
+                  backgroundColor: tagInfo ? tagInfo.color : '#2142ab',
                   color: 'white',
                   borderRadius: '9999px',
                   padding: '0.25rem 0.75rem',
