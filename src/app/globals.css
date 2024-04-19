@@ -71,13 +71,17 @@ body {
 
     .markdown-link:hover {
       @apply text-cLink hover:text-cLinkVisited font-bold underline;
-  }
+    }
 
     .markdown-hr {
       @apply text-cLineBreak;
     }
 
     .markdown-paragraph {
-        @apply text-cBody text-lg mb-4;
+      @apply text-cBody text-lg mb-4;
+    }
+
+    .markdown-table {
+      @apply text-cBody text-lg mb-4
     }
 }

@@ -2,19 +2,26 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { fetchMarkdownContent } from '@/utils/markdown';
 import remarkGfm from 'remark-gfm';
-import remarkHeadings from 'remark-heading-id';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import 'katex/dist/katex.min.css';
 
 interface MarkdownContentProps {
   content: string;
 }
 
 const MarkdownContent: React.FC<MarkdownContentProps> = ({ content }) => {
+
   return (
-    <div className="markdown-content prose prose-invert max-w-none">
+    <div className="markdown-content prose prose-invert max-w-none font-oldStandardTT">
       <ReactMarkdown
-        remarkPlugins={[remarkGfm, remarkHeadings]}
+        remarkPlugins={[remarkGfm, remarkMath]}
+        rehypePlugins={[rehypeKatex, rehypeSlug, rehypeRaw, rehypeAutolinkHeadings]}
         components={{
           h1: ({ node, ...props }) => (
             <h1 className="markdown-h1" {...props} />
@@ -43,9 +50,21 @@ const MarkdownContent: React.FC<MarkdownContentProps> = ({ content }) => {
           hr: ({ node, ...props }) => (
             <hr className="markdown-hr" {...props} />
           ),
-          code: ({ node, ...props }) => (
-            <SyntaxHighlighter language="javascript" style={dark} {...props} />
+          table: ({ node, ...props }) => (
+            <table className="markdown-hr" {...props} />
           ),
+          code: ({ node, ...props }) => (
+            <SyntaxHighlighter language="javascript" {...props} />
+          ),
+          span: ({ node, ...props }) => {
+            // Check if the span is a KaTeX element with type assertion
+            const isKatex = (node?.properties?.className as string)?.includes('katex') ?? false;
+            if (isKatex) {
+              return <span style={{ color: '#2142ab' }} {...props} />;
+            }
+            // For other spans, return them as is
+            return <span {...props} />;
+          },
         }}
       >
         {content}

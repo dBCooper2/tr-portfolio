@@ -2,28 +2,10 @@
 
 A Professional Portfolio built with NextJS and deployed using Vercel.
 
-## Functionality
 
-This website is meant to be taken and deployed by you, the reader, without needing a subscription to any no-code tools like Wix, Weebly, etc., and an easy project to dip your toes into NextJS, Tailwind and Vercel without needing to build something huge.
+## Updating the Site
 
-## Site Customization: Resume Content
-
-To customize this portfolio for yourself, you will need to edit some markdown files, some JSON files, and do a little configuring with the JavaScript Files (not much though). This section covers editing the Markdown, JSON data, Social Links and Contact Pages for your resume.
-
-### You will need:
-
-- A resume (I copied mine from my Linkedin Profile) containing:
-  - An Abstract/Summary
-  - Education
-  - Work Experience
-  - Certificates and Licenses
-  - Research Experience
-  - Skills
-  - Projects
-- A headshot or profile picture to add to the site
-- a PNG file to use as the icon for your website(you can always create one from a generator like [Favicon.io](https://favicon.io/), which is what I did)
-
-If you do not have one or more of these, don't worry, there will be alternate steps for removing or creating this content later.
+You can update the site by updating the Markdown and JSON files in `/src/content/`, then pushing the changes to the `main` branch.
 
 ### Editing the Markdown Files
 
@@ -31,25 +13,15 @@ Using Markdown Files to store your resume information is very convenient, becaus
 
 The following files need to be edited to contain your info, and can be found in the directory `/src/content/`:
 
-- Summary (`Summary.md`): This is your name, field and a sentence or two to describe yourself.
-
-- Abstract (`Abstract.md`): This is an intro to your portfolio. Outline your story and what you're all about here so readers get an idea of who you are.
-
-- Education (`Education.md`): This is where you can add any higher education, bootcamps, or other education experience you have.
-
-- Work Experience (`Experience.md`): This is where you can add your previous work experience.
-
-- Certificates (`Certificates.md`): You can include any certificates you have received here. I have added my Linkedin Learning certificates as links to the certificates online. Please follow the formatting to ensure that the links are displayed and open correctly.
-
-- Research (`Research.md`): If you have been involved in research (I have not), this is where you can add any relevant research you have been involved in. To add this to the deployed website, make sure you un-comment the HTML and JavaScript needed to display this category in `src/app/page.tsx`.
-
-- Footer (`Footer.md`): This is just some notes saying I made the site and what it was made with. You can either edit this or remove it, crediting me isn't important. If the file is blank nothing will render and no errors will be thrown, so you can just delete everything in here.
-
-A file is contained in the `/src/content/` directory named `MarkdownGuide.md` that you can look at for a cheat sheet to customize the markdown files if you need to add anything extra.
-
-### Skills and Projects
-
-The Skills and Projects sections are slightly harder to edit, but are dynamic elements that I think look prettier than the static markdown content. The files that you will need to edit are `tags.json` and `projects.json`, also located in the `/src/content/` directory.
+- Summary (`Summary.md`)
+- Abstract (`Abstract.md`)
+- Education (`Education.md`)
+- Work Experience (`Experience.md`)
+- Certificates (`Certificates.md`)
+- Research (`Research.md`)
+- Footer (`Footer.md`)
+- 
+A file is contained in the `/src/content/` directory named `MarkdownGuide.md` that you can use as a cheat sheet.
 
 #### Skills:
 
@@ -76,13 +48,11 @@ The `tags.json` file is where you'll add your list of skills. The JSON containin
   },
 }
 ```
-The `"text"` field is where you add the name of your skill. For any skills with spaces in between them, like "Data Visualization," make sure to add a dash where the spaces would be. So for "Data Visualization," the field would be `"Data-Visualization"`.
-
-The `"color"` field is where you can add the hex-code for a color you'd like the tag to be. By default, each tag is white with black text.
+For the skills, replace whitespace with a dash, and add a custom color for each skill.
 
 #### Projects:
 
-The `projects.json` file is slightly more complex than the skills file, but is similarly simple to edit. The JSON containing each project is in the form:
+The `projects.json` file contains a blurb of each project and links to ther code/demo. If there is no demo the button will not appear, but the code button is always present. Link Skills from `tags.json` to the project by adding them to the "skills" field.
 
 ```json
 {
@@ -114,10 +84,6 @@ The `projects.json` file is slightly more complex than the skills file, but is s
   }
 }
 ```
-
-Each field here is pretty self-explanatory, just fill in the fields, being sure to keep everything in quotes. If you need to use quotation marks, make sure to use `\"` to not escape the quotation marks too early.
-
-The `skills` section should contain a list of skills that align with the skills in the `tags.json` file. Make sure to match the spelling and hyphens with the text in `tags.json`, so that the color of each skill matches in the projects section.
 
 ### Contact Page
 
@@ -155,7 +121,7 @@ Here you can change each of the `YOUR EMAIL/NAME/USERNAME HERE` fields to contai
 
 ### Social Links and a PDF Resume Link
 
-To edit the social links on the Homepage, the process is very similar. Navigate to the file `src/components/Summary.jsx` and navigate to the section:
+To edit the social links on the home page, navigate to the file `src/components/Summary.jsx` and navigate to the section:
 
 ```jsx
 <div className="px-2 mt-8 flex flex-wrap justify-center md:justify-start gap-4 text-xl font-bold">
@@ -194,9 +160,9 @@ To edit the social links on the Homepage, the process is very similar. Navigate 
 
 ```
 
-Here you can add or delete any links from this section. If you delete the `Contact` block in this section, the Contact Page will become unreachable unless the user knows the URL.
 
-Additionally, you can attach your resume here in where the code block says ```YOUR RESUME HERE```. Simply add your resume as a PDF to the directory `public/documents` and your resume will become accessible from the site, opening in a new tab when the user clicks the `Resume` button.
+
+To update your resume, add it as a PDF to the directory `public/documents` and your resume will become accessible from the site. Make sure to rename the file in Summary.jsx to match the file in `/public/`.
 
 ## Site Customization: Images and Metadata
 
@@ -204,7 +170,7 @@ To make the site your own, you should add a headshot or profile picture, and edi
 
 ### Headshot Image:
 
-To edit the headshot that appears on the site, simply take your headshot and add it to the `/public/images/` directory in the project. Then copy the name of the filename, and locate the file `/src/components/Summary.jsx` and locate the following code:
+To update your headshot, add the new photo to the `/public/images/` directory in the project. Then copy the name of the filename, and locate the file `/src/components/Summary.jsx` and locate the following code:
 
 ```jsx
 <Image
@@ -252,8 +218,6 @@ export const metadata: Metadata = {
 ```
 
 Edit the Title and Description fields to change the metadata, and then move on to the `icons` section. Change the filenames in the fields `url` and `href` to match the filenames you just added in the `head.tsx` file.
-
-Now your portfolio is ready to go! Here are some extra instructions in case you want to customize the site further, or need to change the other sections because you're missing a resume field. Otherwise, you can skip to the section [Deployment](#Deployment)
 
 ## Site Customization: Resume Customization and Color Extras
 
@@ -303,23 +267,7 @@ export default async function HomePage() {
 }
 ```
 
-If you do research, remove the 2 slashes in front of the line `const researchContent = await fetchMarkdownContent('src/content/Research.md');` to uncomment the function to fetch the data from the `Research.md` file. To add the data into the site, copy/paste one of the sections with the `<MarkdownContent />` Component and edit it like so:
-
-```jsx
-<div id="Education">
-  <MarkdownContent content={educationContent} />
-</div>
-```
-
-becomes:
-
-```jsx
-<div id="Research">
-  <MarkdownContent content={researchContent} />
-</div>
-```
-
-This process can be repeated for any other markdown files you want to add, just making sure to fetch the markdown file with `fetchMarkdownContent('src/content/Filename.md')` and adding an HTML section:
+To add a new section, you will need to add this block to the `return` statement:
 
 ```jsx
 <div id="Filename">
@@ -327,9 +275,13 @@ This process can be repeated for any other markdown files you want to add, just 
 </div>
 ```
 
-You can also rearrange each of the resume components here to fit your liking too.
+And a corresponding fetch request for the markdown file:
 
-Now that you have added all of the extra resume content you might need, you need to add another <ResumeButton /> Item that is linked to the HTML sections you added. Navigate to the `/src/app/head.tsx` file and find the section:
+```jsx
+const abstractContent = await fetchMarkdownContent('src/content/Abstract.md');
+```
+
+If you add a new section, you'll need to change the ResumeButton components in `/src/app/head.jsx`
 
 ```jsx
 <div className="space-y-4 hidden lg:block">
@@ -344,8 +296,6 @@ Now that you have added all of the extra resume content you might need, you need
   </div>
 </div>
 ```
-
-Simply copy/paste one of the `<ResumeButton sectionId="Filename" />` components within the innermost `<div>` component and rename the sectionId field to the name of each extra filename content you added. Then make sure to rearrange the `<ResumeButton />` Components to match the order they appear in `/src/app/page.tsx`, if you rearranged anything.
 
 ### Changing the Site's Colors, Fonts and Styles:
 
@@ -384,10 +334,6 @@ theme: {
   plugins: [],
 };
 ```
-
-In the `colors` section, you can change the hex codes of each color to whatever you want to create a custom theme for the site, without needing to edit all of the Tailwind CSS in each component and page.
-
-You can also change the font in the `fontFamily` section, which can be done by following this [guide](https://www.youtube.com/watch?v=B4v7ZDLxiS4&t=209s).
 
 Lastly, to add any custom styles for the rendered markdown, you can add custom styles to the file `/src/app/globals.css` in the `@layer utilities` section:
 
@@ -442,28 +388,3 @@ Lastly, to add any custom styles for the rendered markdown, you can add custom s
     }
 }
 ```
-
-This should be sufficient to modify the site however you please, anything more specific will require you to dive deeper into the NextJS code. Now let's deploy your site and get it up and running.
-
-## Deployment
-
-To deploy your site, your repository needs to be on GitHub (so push it if you didn't clone this repository you can use this [guide](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)).
-
-First run `npm run build` in the terminal, in the root directory of this project to ensure no errors have been generated by you editing the code. If everything passes, you can move on to deployment.
-
-Next, push your changes with these steps:
-
-```git
-git add .
-
-git commit -m "commit message"
-
-git push
-
-```
-
-and make sure to follow any steps that git says you need to do.
-
-Lastly, go to [Vercel's Website](https://vercel.com/) and connect your GitHub account to your Vercel Account. From there, deploy the site following the steps on Vercel. 
-
-If everything went smoothly, you should have a working, custom portfolio site!

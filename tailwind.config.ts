@@ -29,6 +29,11 @@ const config: Config = {
         cButton: '#1a327a', // button color
         cButtonHover: '#1e3a82', // button hover color
         cLineBreak: '#1f3b8b', // colors for line breaks
+        cBodySecondary:'#415f42',
+        cPrimary:'#1f3b8b',
+        cSecondary:'#1f3b8b',
+        cTertiary:'#1f3b8b',
+        cQuaternary:'#1f3b8b',
       },
       fontFamily: {
         'oldStandardTT': ['Old Standard TT', 'serif'], //LaTeX-Like Font

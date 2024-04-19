@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Link from "next/link";
+import Head from "./head";
+import Foot from "./foot";
 
 export const metadata: Metadata = {
   title: "Trevor Rowland :: Portfolio",
@@ -21,6 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head />
       <body className='bg-cBg'>{children}</body>
     </html>
   );
