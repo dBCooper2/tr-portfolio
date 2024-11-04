@@ -10,6 +10,9 @@ interface Article {
   // Add any other properties your article data has
 }
 
+// add sidebar to each article that has a dropdown menu by date of each article
+// 
+
 const BlogPage = () => {
   return (
     <div className="container mx-auto px-4 sm:px-0 py-20 min-h-screen font-oldStandardTT">

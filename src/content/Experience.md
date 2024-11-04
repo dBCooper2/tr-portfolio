@@ -1,5 +1,19 @@
 # Work Experience
 
+### Geek Squad - Consultation Agent
+
+#### May 2024-August 2024
+
+#### Mount Juliet, Tennessee
+
+***
+
+### Executive Travel of Nashville - Information Technology Intern
+
+#### June 2024-August 2024
+
+#### Lebanon, Tennessee
+
 ***
 
 ### Rocketown - Café Lead
